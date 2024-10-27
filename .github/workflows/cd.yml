@@ -13,6 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Install Dependencies
+        run: make install
+
       - name: Deployment To Hugging Face
         env:
           HF: ${{ secrets.HF }}
